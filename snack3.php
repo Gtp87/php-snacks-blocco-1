@@ -46,7 +46,11 @@ $posts = [
 // seleziono elementi array per chiave = data
 foreach ($posts as $key => $date) {
     // var_dump($key);
-    echo '<div>Data: '. $key;  echo '</div>';
+    echo '<ul>Data: '. $key;  
+    foreach ($date as $post) {
+        echo '<li>' . $post['title'] . ' - ' . $post['author'] . ' - ' . $post['text'] . '</li>';
+    }
+    echo '</ul>';
     
 }
 ?>
