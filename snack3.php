@@ -43,16 +43,7 @@ $posts = [
     ],
 ];
 
-// seleziono elementi array per chiave = data
-foreach ($posts as $key => $date) {
-    // var_dump($key);
-    echo '<ul>Data: '. $key;  
-    foreach ($date as $post) {
-        echo '<li>' . $post['title'] . ' - ' . $post['author'] . ' - ' . $post['text'] . '</li>';
-    }
-    echo '</ul>';
-    
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +55,17 @@ foreach ($posts as $key => $date) {
     <title>Document</title>
 </head>
 <body>
-    <h4></h4>
+<!-- seleziono elementi array per chiave = data -->
+<?php
+foreach ($posts as $key => $date) {
+    // var_dump($key);
+    echo '<ul>Data: '. $key;  
+    foreach ($date as $post) {
+        echo '<li>' . $post['title'] . ' - ' . $post['author'] . ' - ' . $post['text'] . '</li>';
+    }
+    echo '</ul>';
+    
+}
+?>
 </body>
 </html>
